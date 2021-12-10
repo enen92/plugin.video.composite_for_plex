@@ -27,7 +27,7 @@ def process_music(context, url, tree=None):
 
     items = []
     append_item = items.append
-    branches = tree.getiterator()
+    branches = tree.iter()
     for music in branches:
 
         if music.get('key') is None:

@@ -88,7 +88,7 @@ def playlist_user_select(server):
     get_formatted_url = server.get_formatted_url
     tree = server.get_playlists()
 
-    for playlist in tree.getiterator('Playlist'):
+    for playlist in tree.iter('Playlist'):
         image = ''
         if playlist.get('composite'):
             image = get_formatted_url(server.join_url(server.get_url_location(),

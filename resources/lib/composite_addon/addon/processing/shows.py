@@ -38,7 +38,7 @@ def process_shows(context, url, tree=None):
     items = []
     append_item = items.append
     # For each directory tag we find
-    shows = tree.getiterator('Directory')
+    shows = tree.iter('Directory')
     for show in shows:
         item = Item(server, url, tree, show)
         append_item(create_show_item(context, item))

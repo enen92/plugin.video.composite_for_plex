@@ -428,7 +428,7 @@ class PlaylistGenerator:
         return server_sections
 
     def _get_item_collection(self, server, tree):
-        branches = tree.getiterator('Video')
+        branches = tree.iter('Video')
         if branches is None:
             return []
 

@@ -40,7 +40,7 @@ def run(context):
     display_list = []
     append_label = display_list.append
     part_id = ''
-    audio_parts = tree.getiterator('Part')
+    audio_parts = tree.iter('Part')
     for parts in audio_parts:
 
         part_id = parts.get('id')

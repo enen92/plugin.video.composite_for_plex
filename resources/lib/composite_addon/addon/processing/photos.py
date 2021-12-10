@@ -36,7 +36,7 @@ def process_photos(context, url, tree=None):
     items = []
     append_item = items.append
 
-    branches = tree.getiterator()
+    branches = tree.iter()
     for branch in branches:
         item = Item(server, url, tree, branch)
         tag = branch.tag.lower()

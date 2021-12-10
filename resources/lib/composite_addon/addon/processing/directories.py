@@ -33,7 +33,7 @@ def process_directories(context, url, tree=None):
 
     items = []
     append_item = items.append
-    directories = tree.getiterator('Directory')
+    directories = tree.iter('Directory')
     for directory in directories:
         item = Item(server, url, tree, directory)
         append_item(create_directory_item(context, item))

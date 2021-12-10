@@ -536,7 +536,7 @@ class StreamData:
         self.data['audio_count'] = 0
         self.data['sub_count'] = 0
 
-        tags = self.tree.getiterator('Stream')
+        tags = self.tree.iter('Stream')
 
         forced_subtitle = False
         for bits in tags:

@@ -450,7 +450,7 @@ class Plex:  # pylint: disable=too-many-public-methods, too-many-instance-attrib
             return {}
 
         server_list = ETree.fromstring(xml)
-        devices = server_list.getiterator('Device')
+        devices = server_list.iter('Device')
         for device in devices:
 
             LOG.debug('[%s] Found device' % device.get('name'))
@@ -467,7 +467,7 @@ class Plex:  # pylint: disable=too-many-public-methods, too-many-instance-attrib
             discovered_server.set_token(device.get('accessToken'))
             discovered_server.set_user(self.effective_user)
 
-            connections = device.getiterator('Connection')
+            connections = device.iter('Connection')
             for connection in connections:
                 LOG.debug('[%s] Found server connection' % device.get('name'))
 

@@ -41,7 +41,7 @@ def run(context):
     append_label = display_list.append
     fl_select = False
     part_id = ''
-    subtitle_parts = tree.getiterator('Part')
+    subtitle_parts = tree.iter('Part')
     for parts in subtitle_parts:
 
         part_id = parts.get('id')

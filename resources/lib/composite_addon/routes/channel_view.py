@@ -34,7 +34,7 @@ def run(context, url):
 
     items = []
     append_item = items.append
-    directories = tree.getiterator('Directory')
+    directories = tree.iter('Directory')
     for channels in directories:
 
         if channels.get('local', '') == '0' or channels.get('size', '0') == '0':

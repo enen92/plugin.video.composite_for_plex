@@ -227,7 +227,7 @@ def _list_content(context, server, section):
         10: 'Track'
     }
 
-    branches = tree.getiterator(iter_types.get(item_type, 'Directory'))
+    branches = tree.iter(iter_types.get(item_type, 'Directory'))
     if not branches:
         return []
 

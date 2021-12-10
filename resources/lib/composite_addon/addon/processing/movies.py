@@ -42,7 +42,7 @@ def process_movies(context, url, tree=None):
     start_time = time.time()
     items = []
     append_item = items.append
-    branches = tree.getiterator()
+    branches = tree.iter()
     for branch in branches:
         item = Item(server, url, tree, branch)
         if branch.tag.lower() == 'video':

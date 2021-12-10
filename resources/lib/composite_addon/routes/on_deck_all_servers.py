@@ -46,7 +46,7 @@ def _list_content(context, server, section):
     if tree is None:
         return []
 
-    branches = tree.getiterator('Video')
+    branches = tree.iter('Video')
     if not branches:
         return []
 

@@ -44,7 +44,7 @@ def process_tracks(context, url, tree=None):
     }
     items = []
     append_item = items.append
-    branches = tree.getiterator()
+    branches = tree.iter()
     for branch in branches:
         tag = branch.tag.lower()
         item = Item(server, url, tree, branch)

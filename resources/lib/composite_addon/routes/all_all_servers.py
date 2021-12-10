@@ -127,7 +127,7 @@ def _list_content(context, server, section):
         return []
 
     iter_type = 'Video' if get_section_type(context) == 'movie' else 'Directory'
-    branches = tree.getiterator(iter_type)
+    branches = tree.iter(iter_type)
     if not branches:
         return []
 

@@ -100,9 +100,9 @@ def _list_content(context, server, url):
     items = []
     append_item = items.append
 
-    branches = tree.getiterator('Video')
+    branches = tree.iter('Video')
     if not branches:
-        branches = tree.getiterator('Directory')
+        branches = tree.iter('Directory')
 
     for content in branches:
         item = Item(server, url, tree, content)

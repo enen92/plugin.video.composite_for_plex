@@ -52,7 +52,7 @@ def process_episodes(context, url, tree=None, rating_key=None, library=False):
 
     items = []
     append_item = items.append
-    episodes = tree.getiterator('Video')
+    episodes = tree.iter('Video')
     for episode in episodes:
         item = Item(server, url, tree, episode)
         append_item(create_episode_item(context, item, library=library))

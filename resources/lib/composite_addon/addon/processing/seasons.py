@@ -49,7 +49,7 @@ def process_seasons(context, url, rating_key=None, library=False):
     items = []
     append_item = items.append
     # For all the directory tags
-    seasons = tree.getiterator('Directory')
+    seasons = tree.iter('Directory')
     for season in seasons:
 
         if will_flatten:
